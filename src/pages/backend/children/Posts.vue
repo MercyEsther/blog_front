@@ -1,5 +1,7 @@
 <template>
 <div id="post">
+    <img :src="test" alt="">
+
     <div class="row">
         <button class="add" @click="addPost">添加</button>
     </div>
@@ -48,7 +50,8 @@ export default {
     name: "backendPosts",
     data(){
         return{
-            posts: {}
+            posts: {},
+            test: ""
         }
     },
     created(){
@@ -91,12 +94,14 @@ export default {
             }
         },
         submitImg(e,post){
+            console.log(e);
+            let self = this;
             let file = e.currentTarget.files[0];
             let reader = new FileReader();
             reader.readAsDataURL(file);
-            reader.onload = function(){
-                post.img = reader.result;
-                console.log("%c [imgSubmit]","color: green");
+            reader.onload = () => {
+                let base64 = reader.result;
+                post.img = base64;
             }
         }
     }
