@@ -7,6 +7,8 @@ export default {
 
     getStore: (name) => {
         let data = localStorage.getItem(name);
-        return data;
+        if(data){
+            return JSON.parse(data);
+        }
     }
 }
