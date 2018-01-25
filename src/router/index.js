@@ -19,7 +19,7 @@ vue.use(Router);
 
 const routes = [
     {
-        path: "/v1",
+        path: "/",
         name: "app",
         component: App,
         children: [{
