@@ -1,21 +1,24 @@
+import config from "../config.js";
 import vue from "vue";
 import Router from "vue-router";
 import App from "../App";
 import Home from "../pages/home/Home";
-import localStore from "../js/localStore.js";
-
+import localStore from "../store/localStore.js";
 const Projects  = () => import("../pages/projects/Projects");
-
 const BackendLogin = () => import("../pages/login/Login");
-
 const Backend = () => import("../pages/backend/Common");
 const BackendPosts = () => import("../pages/backend/children/Posts");
 const BackendProjects = () => import("../pages/backend/children/Projects");
 const BackendResource = () => import("../pages/backend/children/Resource");
 const BackendUsers = () => import("../pages/backend/children/Users");
 const BackendDesign = () => import("../pages/backend/children/Design");
+const Posts = () => import("../pages/home/Posts");
 
 vue.use(Router);
+
+/**
+ * Routes Mapping
+ */
 
 const routes = [
     {
@@ -33,6 +36,10 @@ const routes = [
             path: "projects",
             name: "projects",
             component: Projects
+        },{
+            path: "posts",
+            name: "posts",
+            component: Posts
         },{
             path: "login",
             name: "backendLogin",
@@ -72,11 +79,19 @@ const routes = [
     }
 ]
 
+/**
+ * new Router
+ */
+
 const vueRouter = new Router({
-    mode: "history",
+    mode: config.routerMode,
     bash: __dirname,
     routes,
 })
+
+/**
+ * check Login status
+ */
 
 vueRouter.beforeResolve((to, from, next) => {
     const nextRoute = [

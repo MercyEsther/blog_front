@@ -5,7 +5,6 @@
 
 <script>
 import Navbar from "../../components/Navbar";
-import html from "../../posts/test.js";
 
 export default {
     name: "projects",

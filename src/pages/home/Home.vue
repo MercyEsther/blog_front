@@ -41,7 +41,7 @@
 
 <script>
 import Next from "../../components/Next";
-import api from "../../js/api.js";
+import api from "../../service/api.js";
 export default {
     name: "home",
     components: {Next},

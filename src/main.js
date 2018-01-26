@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import "./js/fontsizeAdapt.js";
+import "./utils/fontsizeAdapt.js";
 import store from "./store";
 
 Vue.config.productionTip = false

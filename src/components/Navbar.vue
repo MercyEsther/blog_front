@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import api from "../js/api.js";
+import api from "../service/api.js";
 import {mapState,mapMutations} from "vuex";
 
 export default {

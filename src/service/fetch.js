@@ -20,6 +20,7 @@ export default async(url="", method="GET", data={}) => {
 
     else if (method == "POST"){
         data = JSON.stringify(data);
+        
         options = {
             method: method,
             headers: header,
@@ -28,7 +29,8 @@ export default async(url="", method="GET", data={}) => {
     }
 
     if (window.fetch){
-        const result = await fetch(url, options)
+        const result = await fetch(url, options);
+        console.log(result);
         const response = result.ok ? 
             result.json() :
             result.status;

@@ -44,7 +44,7 @@
 </template>
 
 <script scoped>
-import api from "../../../js/api.js";
+import api from "../../../service/api.js";
 
 export default {
     name: "backendPosts",

@@ -1,4 +1,4 @@
-import localStore from "../js/localStore.js";
+import localStore from "./localStore.js";
 
 export default {
     
