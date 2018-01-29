@@ -1,9 +1,4 @@
 /**
- * setting runtime env 
- */
-
-
-/**
  * config
  */
 
@@ -14,7 +9,7 @@
     routerBase : __dirname,
 
     // runtime
-    env: "prod"
+    env: "dev"
  }
 
  export default config;

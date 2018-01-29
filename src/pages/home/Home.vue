@@ -20,7 +20,7 @@
     <div class="page page2" ref="page">
       <h1 class="page2Title">个人日志</h1>
       <ul class="content">
-        <li class="post" :key="index" v-for="(post,index) in posts" v-if="index < 6">
+        <li class="post" :key="index" v-for="(post,index) in posts" v-if="index < 6" @click="$store.commit('SET_CURPOST', post); $router.push(`/post/${post.id}`)">
           <img :src="post.img" class="postImg">
           <span class="postTitle">{{post.title}}</span>
           <div class="row">

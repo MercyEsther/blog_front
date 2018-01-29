@@ -19,5 +19,13 @@ export default {
 
     updatePost: (data) => fetch(`${host}/api/v1/post/update`, "POST", data),
 
-    backendSignout: (data) => fetch(`${host}/api/v1/backend/signout`, "GET", data)
+    backendSignout: (data) => fetch(`${host}/api/v1/backend/signout`, "GET", data),
+
+    addDesign: (data) => fetch(`${host}/api/v1/design/add`, "GET", data),
+
+    getDesigns: () => fetch(`${host}/api/v1/designs`, "GET"),
+
+    deleteDesign: (data) => fetch(`${host}/api/v1/design/delete`, "GET", data),
+
+    updateDesign: (data) => fetch(`${host}/api/v1/design/update`, "POST", data)
 }

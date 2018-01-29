@@ -3,10 +3,10 @@
     <h1 class="titleF title">日<span class="titleB">志</span></h1>
 
     <ul class="posts">
-        <li class="post" :key="index" v-for="(item,index) in posts">
+        <li class="post" :key="index" v-for="(item,index) in posts" @click="$store.commit('SET_CURPOST',item); $router.push(`/post/${item.id}`)">
             <span class="postTitle">{{item.title}}</span>
             <span class="author">{{item.author}}</span>
-            <span class="update">{{item.updateAt}}</span>
+            <span class="update">{{new Date(item.updateAt).toLocaleString()}}</span>
         </li>
     </ul>
 </div>
@@ -63,4 +63,39 @@ export default {
         margin: 0;
         color: #FFAFB6;
     }
+    .posts{
+        position: relative;
+        width: 80%;
+        left: 10%;
+    }
+    .post{
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.5px solid #eee;
+    }
+    .post:hover{
+        cursor: pointer;
+        background-color: #eee;
+    }
+    .postTitle{
+        font-size: 1.2rem !important;
+        flex: 0 1 50%;
+    }
+    .author{
+        flex: 0 1 20%;
+    }
+    .update{
+        flex: 0 1 30%;
+    }
+    .update,.author{
+        display: inline-block;
+        position: relative;
+        text-align: right;
+        font-size: 0.8rem;
+        color: #676767;
+    }
 </style>
+
