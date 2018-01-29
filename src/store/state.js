@@ -1,5 +1,7 @@
 export default {
     isLogin: false,
     posts: [],
-    curPost: {}
+    curPost: {},
+    designs: [],
+    curDesign: {}
 }

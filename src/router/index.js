@@ -14,6 +14,8 @@ const BackendUsers = () => import("../pages/backend/children/Users");
 const BackendDesign = () => import("../pages/backend/children/Design");
 const Posts = () => import("../pages/post/Posts");
 const Post = () => import("../pages/post/Post");
+const Designs = () => import("../pages/design/Designs");
+const Design = () => import("../pages/design/Design");
 
 vue.use(Router);
 
@@ -45,6 +47,14 @@ const routes = [
             path: "post/:id",
             name: "post",
             component: Post,
+        },{
+            path: "designs",
+            name: "designs",
+            component: Designs
+        },{
+            path: "design/:id",
+            name: "design",
+            component: Design
         },{
             path: "login",
             name: "backendLogin",

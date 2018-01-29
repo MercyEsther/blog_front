@@ -25,6 +25,16 @@ export default {
     },
 
     /**
+     * set designs
+     * 
+     * @param {object} state 
+     * @param {object} designs 
+     */
+    SET_DESIGNS(state,designs){
+        state.designs = designs;
+    },
+
+    /**
      * 
      * @param {*} state 
      * @param {*} post 
@@ -32,6 +42,16 @@ export default {
     SET_CURPOST(state,post){
         state.curPost = post;
         localStore.setStore("curPost", post);
+    },
+
+    /**
+     * set curDesign
+     * 
+     * @param {string} state 
+     * @param {object} design 
+     */
+    SET_CURDESIGN(state,design){
+        state.curDesign = design;
     }
 
 }

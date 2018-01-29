@@ -31,7 +31,7 @@ export default {
             items: [
                 {name: "首页", path:"home"},
                 {name: "项目", path: "projects"},
-                {name: "设计", path: "design"},
+                {name: "设计", path: "designs"},
                 {name: "日志", path: "posts"},
                 {name: "资源", path: "resource"}
                 ],
