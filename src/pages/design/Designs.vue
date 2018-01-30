@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #designs{
         position: relative;
         width: 100%;

@@ -36,15 +36,19 @@
 
     <!-- 向下滚动一个屏幕 -->
     <Next/>
+
+    <!-- Footer -->
+    <Footer/>
 </div>
 </template>
 
 <script>
 import Next from "../../components/Next";
 import api from "../../service/api.js";
+import Footer from "../../components/Footer";
 export default {
     name: "home",
-    components: {Next},
+    components: {Next, Footer},
     data(){
         return{
             navbarShow: false,

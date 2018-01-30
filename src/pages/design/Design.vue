@@ -47,8 +47,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #design{
+    position: relative;
+    width: 100%;
+}
+.designs{
     position: relative;
     width: 100%;
 }
